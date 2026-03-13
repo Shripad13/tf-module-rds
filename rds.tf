@@ -1,6 +1,7 @@
-resource "aws_db_instance" "default" {
+resource "aws_db_instance" "main" {
   allocated_storage      = 10
-  db_name                = "${var.env}-rds"
+  identifier                = "${var.env}-rds"
+  db_name                = "expense"
   engine                 = "var.engine"
   engine_version         = "var.engine_version"
   instance_class         = "var.instance_class"
